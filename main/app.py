@@ -13,15 +13,20 @@ videoStream = VideoStream(src=0).start()
 
 @app.route("/")
 def home():
-    return render_template("index.html")
+    return render_template("home.html")
 
 
 @app.route("/video")
+def video():
+    return render_template("video.html")
+
+
+@app.route("/video_feed")
 def video_feed():
     return Response(stream_with_context(generate()), mimetype="multipart/x-mixed-replace; boundary=frame")
 
 
-def motion():
+def read_next_frame():
     global outputFrame, lock, videoStream
     while True:
         frame = videoStream.read()
@@ -41,10 +46,9 @@ def generate():
             if not success:
                 continue
 
-        yield(b'--frame\r\n' b'Content-Type: image/jpeg\r\n\r\n' +
-              bytearray(encodedImage) + b'\r\n')
+        yield(b"--frame\r\nContent-Type: image/jpeg\r\n\r\n" +
+              bytearray(encodedImage) + b"\r\n")
 
 
-t = threading.Thread(target=motion)
-t.daemon = True
-t.start()
+thread = threading.Thread(target=read_next_frame, daemon=True)
+thread.start()

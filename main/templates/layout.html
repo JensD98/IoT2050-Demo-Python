@@ -6,7 +6,10 @@
     <title>Streaming</title>
 </head>
 <body>
-    <h1>Streaming</h1>
-    <img src="{{ url_for('video_feed') }}">
+    <nav>
+        <li><a href="{{ url_for('home') }}">Home</a></li>
+        <li><a href="{{ url_for('video') }}">Video</a></li>
+    </nav>
+    {% block content %}{% endblock %}
 </body>
 </html>
