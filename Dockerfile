@@ -2,10 +2,10 @@ FROM python:3
 
 WORKDIR /app
 
-RUN apt update && \
-    apt install libgl1-mesa-glx -y && \
-    pip install -r requirements/prod.txt 
+COPY main requirements ./
 
-COPY main ./
+RUN apt-get update && \
+    apt-get install libgl1-mesa-glx -y && \
+    pip install -r prod.txt 
 
 CMD ["gunicorn", "--bind", "0.0.0.0:5000", "app:app"]
