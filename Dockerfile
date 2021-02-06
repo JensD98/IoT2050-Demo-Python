@@ -1,10 +1,11 @@
-FROM python:3
+FROM python:3 as build
 
-WORKDIR /usr/src/app
+WORKDIR /app
 
-COPY requirements.txt ./
-RUN pip install --no-cache-dir -r requirements.txt
+RUN apt update && \
+    apt install libgl1-mesa-glx -y && \
+    pip install numpy flask gunicorn opencv-contrib-python imutils
 
-COPY /main ./
+COPY main ./
 
-CMD [ "flask", "run" ]
+CMD ["gunicorn", "--bind", "0.0.0.0:5000", "app:app"]
