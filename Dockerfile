@@ -1,10 +1,10 @@
-FROM python:3 as build
+FROM python:3
 
 WORKDIR /app
 
 RUN apt update && \
     apt install libgl1-mesa-glx -y && \
-    pip install numpy flask gunicorn opencv-contrib-python imutils
+    pip install -r requirements/prod.txt 
 
 COPY main ./
 
