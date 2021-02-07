@@ -31,7 +31,8 @@ def read_next_frame():
     while True:
         frame = videoStream.read()
         with lock:
-            outputFrame = frame.copy()
+            if frame is not None:
+                outputFrame = frame.copy()
 
 
 def generate():
