@@ -1,0 +1,6 @@
+#!/bin/bash
+
+# https://stackoverflow.com/questions/5947742/how-to-change-the-output-color-of-echo-in-linux
+declare -r GREEN="\033[38;2;0;255;0m"
+declare -r RED="\033[38;2;255;0;0m"
+declare -r RESET_COLOR="\033[m"

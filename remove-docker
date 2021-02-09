@@ -1,0 +1,23 @@
+#!/bin/bash
+
+source ./bash-colors
+
+echo -e "${GREEN}Removing Docker ...${RESET_COLOR}" && \
+apt-get purge -y docker-ce docker-ce-cli containerd.io && \
+echo -e "${GREEN}Cleaning file system ...${RESET_COLOR}" && \
+rm -rf /var/lib/docker /var/lib/containerd /var/lib/systemd && \
+rm -rf /etc/systemd /etc/docker && \
+find /var/log -type f -delete && \
+rm -rf /var/cache/apt/* && \
+echo -e "${GREEN}Removing intermediate packages ...${RESET_COLOR}" && \
+apt-get autoremove -y && \
+apt-get clean -y && \
+echo -e "${GREEN}Docker has been removed!!!${RESET_COLOR}"
+
+echo -e $RESET_COLOR
+
+
+
+
+
+
