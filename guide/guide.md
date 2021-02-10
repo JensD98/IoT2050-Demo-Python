@@ -31,7 +31,7 @@ If all went well, you should now be connected to the SIMATIC IOT2050 and logged 
 $ apt update && apt upgrade -y
 ```
 
-to update the sytsem.
+to update the system.
 
 - Install Git through the package manager:
 
