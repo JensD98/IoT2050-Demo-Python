@@ -26,7 +26,7 @@ def video_feed():
     return Response(stream_with_context(generate()), mimetype="multipart/x-mixed-replace; boundary=frame")
 
 
-def read_next_frame():
+def read_frames():
     global outputFrame, lock, videoStream
     while True:
         frame = videoStream.read()
@@ -51,5 +51,5 @@ def generate():
               bytearray(encodedImage) + b"\r\n")
 
 
-thread = threading.Thread(target=read_next_frame, daemon=True)
+thread = threading.Thread(target=read_frames, daemon=True)
 thread.start()
