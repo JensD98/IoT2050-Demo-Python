@@ -16,7 +16,7 @@ This is the guide showing you how to get the demo project up and running on the 
 ## Installing the SD-Card Example Image
 
 1. Using [7-Zip](https://www.7-zip.de/) download and extract the pre-built image, which can found in the downloads section of
-   [the first release](https://github.com/JensD98/iot2050-demo-python/releases/tag/untagged-a8cfe2056ca56095a4a4).
+   [the first release](https://github.com/JensD98/iot2050-demo-python/releases/tag/v1.0.0).
 2. From here follow the
    [setup instructions](https://support.industry.siemens.com/tf/ww/en/posts/how-to-setup-the-iot2050/238945/?page=0&pageSize=10)
    to complete the installation. Note the instruction is using a different image which has some problems when trying to install Docker, make sure to use the
