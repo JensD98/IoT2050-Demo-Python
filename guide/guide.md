@@ -19,7 +19,8 @@ This is the guide showing you how to get the demo project up and running on the 
    [the first release](https://github.com/JensD98/iot2050-demo-python/releases/tag/untagged-a8cfe2056ca56095a4a4).
 2. From here follow the
    [setup instructions](https://support.industry.siemens.com/tf/ww/en/posts/how-to-setup-the-iot2050/238945/?page=0&pageSize=10)
-   to complete the installation. Note the instruction is using a different image which has some problems when trying to install Docker, make sure to use the **pre-built image**    as shown in the previous step!
+   to complete the installation. Note the instruction is using a different image which has some problems when trying to install Docker, make sure to use the
+   **pre-build image** as shown in the previous step! Furthermore the example image starts with the IP 192.168.200.1 preconfigured on the first Ethernet interface, and use      DHCP at another, which is the other way around as in the linked instruction.
 
 ## Running the application
 
