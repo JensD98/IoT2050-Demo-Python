@@ -57,6 +57,7 @@ $ ./install-docker
 
 or follow the instruction on the [docker docs](https://docs.docker.com/engine/install/debian/) website.
 
+- Connect the webcam to the first USB Port.
 - Run
 
 ```bash
@@ -64,4 +65,5 @@ $ make build # build the image
 $ make start-app # start the container
 ```
 
-which will build the Docker image and start the container.
+which will build the Docker image and start the container. With no errors you should now be able open `http://<your-IP-address>:5000` in a web browser and
+view the webcam footage :tada:.
