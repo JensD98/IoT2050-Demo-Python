@@ -4,7 +4,7 @@ This is the guide showing you how to get demo project up and running. After work
 
 - Get remote access to the SIMATIC IOT2050.
 - Install Docker on the SIMATIC IOT2050.
-- Host the Python application running in a Docker container, which will use a USB webcam connected to the SIMATIC IOT2050 and stream the captured video
+- Host the Python application running in a Docker container, which will use a USB webcam connected device and stream the captured video
   to a web page/web browser.
 
 ## Prerequisites
@@ -20,3 +20,46 @@ This is the guide showing you how to get demo project up and running. After work
 2. From here follow the
    [setup instructions](https://support.industry.siemens.com/tf/ww/en/posts/how-to-setup-the-iot2050/238945/?page=0&pageSize=10)
    to complete the installation. Note the instruction is using a different image which has some problems when trying to install Docker, make sure to use the **pre-built image** provided in the previous step!
+
+## Running the application
+
+If all went well, you should now be connected to the SIMATIC IOT2050 and logged in as root.
+
+- Verify that the device is connected to the internet by running
+
+```bash
+$ apt update && apt upgrade -y
+```
+
+to update the sytsem.
+
+- Install Git through the package manager:
+
+```bash
+$ apt install git
+```
+
+- Clone this repository to some location in the file system e.g. `/home`:
+
+```bash
+$ cd ~
+$ git clone https://github.com/JensD98/iot2050-demo-python.git
+```
+
+- Install Docker by running
+
+```bash
+$ cd iot2050-demo-python
+$ ./install-docker
+```
+
+or follow the instruction on the [docker docs](https://docs.docker.com/engine/install/debian/) website.
+
+- Run
+
+```bash
+$ make build # build the image
+$ make start-app # start the container
+```
+
+which will build the Docker image and start the container.
