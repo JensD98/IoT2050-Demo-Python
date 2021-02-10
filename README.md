@@ -1,7 +1,7 @@
 # IOT2050 Demo Project
-> Demo project for the SIMATIC IOT2050.
+> Stream video from SIMATIC IOT2050 to web browser
 
-With this small Python application you can
-turn your SIMATIC IOT2050 into a webcam streaming device. Connect a USB webcam and watch the the captured video on a web page.
-To learn more and how to run the application, check out [the guide](https://github.com/JensD98/iot2050-demo-python/blob/master/guide/guide.md).
+This demo project allows you to stream video from webcam to web browser. 
+To learn more and how to deploy the application to the SIMATIC IOT2050,
+check out [the guide](https://github.com/JensD98/iot2050-demo-python/blob/master/guide/guide.md).
  
