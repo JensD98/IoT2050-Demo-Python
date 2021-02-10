@@ -66,4 +66,4 @@ $ make start-app # start the container
 ```
 
 which will build the Docker image and start the container. With no errors you should now be able open `http://<your-IP-address>:5000` in a web browser and
-view the webcam footage :tada:.
+view the webcam footage :tada:. To stop the app and remove the container, write `make stop-app`.
