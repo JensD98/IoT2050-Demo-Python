@@ -43,7 +43,7 @@ $ apt install git
 - Clone this repository to some location in the file system e.g. `/home`:
 
 ```bash
-$ cd ~
+$ cd /home
 $ git clone https://github.com/JensD98/iot2050-demo-python.git
 ```
 
@@ -51,6 +51,7 @@ $ git clone https://github.com/JensD98/iot2050-demo-python.git
 
 ```bash
 $ cd iot2050-demo-python
+$ chmod +x install-docker remove-docker # make files executable
 $ ./install-docker
 ```
 
