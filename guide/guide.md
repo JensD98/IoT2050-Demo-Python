@@ -25,7 +25,7 @@ This is the guide showing you how to get the demo project up and running on the 
 
 If all went well, you should now be connected to the SIMATIC IOT2050 and logged in as root.
 
-- Verify that the device is connected to the internet by running
+- Verify that the device is connected to the Internet by running
 
 ```bash
 $ apt update && apt upgrade -y
