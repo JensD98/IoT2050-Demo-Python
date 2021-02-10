@@ -1,0 +1,10 @@
+*.*
+
+!*.png
+!*.tex
+!.gitignore
+!.spellignore
+!main.bib
+!.vscode
+!.vscode/**
+!main.pdf
