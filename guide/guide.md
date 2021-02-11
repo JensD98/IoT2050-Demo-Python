@@ -1,6 +1,6 @@
 # Demo Guide
 
-This is the guide showing you how to get the demo project up and running on the SIMATIC IOT2050. After working though document you will know how to
+This is the guide showing you how to get the demo project up and running on the SIMATIC IOT2050. After working through this document you will know how to
 
 - Get remote access to the SIMATIC IOT2050.
 - Install Docker on the SIMATIC IOT2050.
